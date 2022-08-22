@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.5;
+}
+#header{
+    background-image: url(./img/1.jpg);
+    background-size: cover;
+    overflow: auto;
+    height: 100vh;
+}
+:root{
+    --p-text-color: #999;
+    --p-text-letter-spacing: 1px;
+}
+#header #logo img{
+    width: 30%;
+}
+#heading {
+    display: flex;
+    justify-content: space-between;
+}
+#label-list i{
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    color: #fff;
+    font-size: 50px;
+    align-items: flex-end;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 15px;
+}
+nav ul li:last-child{
+    margin-right: 50px;
+}
+
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:first-child{ 
+    background-color: #fff;
+    border-radius: 5px;
+}
+nav ul li:first-child a{ 
+    color: #000;
+}
+#main-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 100px;
+}
+
+#main-header h1{
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+#main-header p{
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff
+}
+#main-header a{
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 50px;
+}
+#content-section{
+    width: 75%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#greeting p{
+    letter-spacing: var(--p-text-letter-spacing);
+    color: var(--p-text-color);
+    margin: 50px;
+}
+h2{
+    font-size: 48px;
+}
+#greeting img{
+    width: 100%;
+}
+.dogs-images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dogs-images .dog-info{
+    padding: 20px;
+    width: calc(100%/4);
+}
+.dogs-images .dog-info img{
+    border-radius: 50%;
+}
+
+.dog-info .discription-course{
+    letter-spacing: var(--p-text-letter-spacing);
+    color: var(--p-text-color);
+    margin: 16px 0;
+}
+.dog-info .course-training-name{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+}
+#our-statistics-section{
+    text-align: center;
+    background-image: url(./img/bg.jpg);
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    padding: 50px;
+}
+#our-statistics-section ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+    list-style-type: none;
+}
+.number-statistic{
+    font-size: 70px;
+    margin: 0 0;
+}
+#pet-services{
+    display: flex;
+    margin: 100px;
+}
+.pet-service-sub{
+    width: 55%;
+}
+.pet-service-sub p{
+    color: var(--p-text-color);
+    letter-spacing: var(--p-text-letter-spacing);
+    line-height: 2.5;
+}
+.services-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.services-list .container{
+    width: 40%;
+    padding: 50px;
+    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+    text-align: center;
+}
+
+.container .icon-service i{
+    color: #ff9900;
+    font-size: 3em;
+}
+.container .service-name{
+    font-size: 2em;
+    font-weight: normal;
+    margin: 32px 0;
+}
+.container .summary-service{
+    color: var(--p-text-color);
+    letter-spacing: var(--p-text-letter-spacing);
+    margin: 16px 0;
+}
