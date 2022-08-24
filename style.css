@@ -33,19 +33,57 @@ body {
 }
 nav ul li{
     display: inline-block;
-    margin: 0 10px;
     padding: 15px;
 }
-nav ul li:last-child{
+nav ul li:hover a{
+    color: #000;
+}
+nav ul li:hover{
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+nav ul .contact-us{
     margin-right: 50px;
 }
 
+.drop-down{
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 165px;
+}
 
+.drop-down-list:hover .drop-down{
+    display: block;
+}
+.drop-down ul{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+}
+.drop-down ul li:hover{
+    color: #000;
+    cursor: pointer;
+}
+.drop-down ul li{
+    margin: 0;
+    padding-right: 20px;
+}
+
+.drop-down ul .select-li a{
+    color: #fff;
+}
+ul .select-li:hover a{
+    color: #000;
+}
 nav ul li a{
     color: #fff;
     text-decoration: none;
 }
-nav ul li:first-child{ 
+nav ul .Home-li{ 
     background-color: #fff;
     border-radius: 5px;
 }
