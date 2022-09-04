@@ -10,11 +10,14 @@ body {
     background-image: url(./img/1.jpg);
     background-size: cover;
     overflow: auto;
+    background-position: center;
     height: 100vh;
 }
 :root{
     --p-text-color: #999;
     --p-text-letter-spacing: 1px;
+    --text-bold-color: #ff9900;
+    --input-padding: 12px 12px 12px 0;
 }
 #header #logo img{
     width: 30%;
@@ -50,10 +53,12 @@ nav ul .contact-us{
 .drop-down{
     display: none;
     position: absolute;
-    top: 70px;
-    right: 165px;
+    top: 54px;
+    left: 0;
 }
-
+.drop-down-list{
+    position: relative;
+}
 .drop-down-list:hover .drop-down{
     display: block;
 }
@@ -128,6 +133,31 @@ nav ul li:first-child a{
     color: var(--p-text-color);
     margin: 50px;
 }
+#greeting{
+    animation: fade-in 5s ease-in-out;
+    /*ease-in-out: nhanh dau ve sau cham*/
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#greeting h2{
+    animation: shrink 7s;
+    font-weight: 1000;
+}
+@keyframes shrink{
+    from{
+        letter-spacing: 15px;
+    }
+    to{
+        letter-spacing: var(--p-text-letter-spacing);
+    }
+}
 h2{
     font-size: 48px;
 }
@@ -145,6 +175,11 @@ h2{
 }
 .dogs-images .dog-info img{
     border-radius: 50%;
+}
+
+.dogs-images .dog-info img:hover{
+    transform: rotateY(180deg);
+    transition: transform 800ms;
 }
 
 .dog-info .discription-course{
@@ -200,7 +235,7 @@ h2{
 }
 
 .container .icon-service i{
-    color: #ff9900;
+    color: var(--text-bold-color);
     font-size: 3em;
 }
 .container .service-name{
@@ -213,3 +248,490 @@ h2{
     letter-spacing: var(--p-text-letter-spacing);
     margin: 16px 0;
 }
+
+#Testimonials{
+    background-image: url(./img/bg.jpg);
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+#Testimonials h2{
+    color:#fff;
+    text-align: center;
+    padding: 30px 10px;
+}
+#Testimonials .container-box{
+    display: flex;
+    margin: 0 150px;
+}
+.container-box .author{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-box .author .introduction{
+    width: 80%;
+    text-align: center;
+    letter-spacing: var(--p-text-letter-spacing);
+    color: #fff;
+    
+}
+.container-box .author .avatar{
+    border-radius: 50%;
+    margin: 30px 0;
+    
+}
+.container-box .author .author-name{
+    color: var(--text-bold-color);
+    font-weight: bold;
+    font-size: 24px;
+    position: relative;
+    left: 30px;
+}
+#Our-Blog{
+    padding: 100px 0;
+}
+#Our-Blog h2{
+    text-align: center;
+}
+#Our-Blog .container2{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 100px;
+}
+.container2 .box{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 30%;
+    
+}
+.container2 .box:hover{
+    animation: bounce 0.7s ease;
+}
+
+@keyframes bounce{
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.container2 .box .dog-img img{
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.container2 .box .dog-species{
+    font-size: 21px;
+    font-weight: bold;
+}
+.container2 .box .describe-dog{
+    color: var(--p-text-color);
+    letter-spacing: var(--p-text-letter-spacing);
+}
+.container2 .box .box-under{
+    margin: 10px 20px;
+}
+.container2 .box a{
+    text-decoration: none;
+    color: var(--text-bold-color);
+    font-weight: bold;
+}
+.container2 .box-2{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 30%;
+    padding: 30px;
+    letter-spacing: var(--p-text-letter-spacing);
+}
+
+.container2 .box-2 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    letter-spacing: var(--p-text-letter-spacing);
+}
+.container2 .box-2 .date-meeting{
+    font-size: 16px;
+    color: var(--text-bold-color);
+    margin: 20px 0;
+}
+#map iframe{
+    width: 100%;
+}
+#Contact-Us{
+    padding: 100px;
+}
+#Contact-Us .container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 100px;
+    
+}
+.container3 .contact-form{
+    width: 50%;
+    
+}
+.container3 .contact-form .form-conatainer{
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 7px 7px 10px 0 rgb(56 56 56 / 21%);
+    border-radius: 10px;
+}
+.form-conatainer .cover-form{
+    
+}
+.form-conatainer .form-item{
+    margin: 20px 0;
+    
+}
+.form-conatainer .form-item .name-user{
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+}
+.form-conatainer .form-item .email{
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    
+}
+.form-conatainer .form-item textarea{
+    width: 100%;
+    resize: none;
+    border: none;
+}
+
+.submit-btn{
+    background-color: #ff9900;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.submit-btn a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+nav input{
+    display: none;
+}
+nav label{
+    display: none;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.box-contact{
+    display: flex;
+    align-items: center;
+    
+}
+.box-contact i{
+    width: 20%;
+    font-size: 30px;
+}
+
+.box-contact .example{
+    margin: 0;
+    margin-bottom: 2px;
+    font-size: 15px;
+    color: var(--p-text-color);
+}
+.box-contact .contact-method{
+    font-size: 20px;
+}
+.contact-info{
+    
+}
+.container-item{
+    margin-left: 10px;
+}
+
+#Contact-Us h2{
+    text-align: center;
+} 
+
+footer {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 20% 20% 25% 35%;
+    padding: 30px;
+}
+
+footer .about-us-footer{
+    margin: 0 20px;
+    margin-left: 100px;
+}
+footer h3{
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 24px;
+}
+footer p{
+    color: #727377;
+}
+footer h4{
+    color: #fff;
+    font-weight: 200;
+}
+footer .who-we-are-footer{
+    margin: 0 20px;
+}
+.wrapper-footer{
+    position: relative;
+}
+footer .about-us-info-footer{
+    margin: 0 20px;
+}
+footer .news-letter{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 22em;
+}
+.letter-para{
+    font-size: 16px;
+}
+
+.news-letter .enter-email{
+    display: flex;
+}
+.news-letter .enter-email input{
+    padding: var(--input-padding);
+    font-size: 15px;
+    border: none;
+    
+}
+.news-letter .enter-email a{
+    padding: 12px;
+    text-decoration: none;
+    background: #c57600;
+    color: #fff;
+    
+}
+footer .news-letter .connect-social{
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+}
+.news-letter .icon-box{
+    min-height: 20px ;
+}
+.news-letter .icon-box #fb{
+    background-color: #3b5998;
+    padding: 8px;
+}
+.news-letter #fb i{
+    color: #fff;
+    padding: 3px;
+}
+.news-letter #tw {
+    background-color: #1da1f2;
+    padding: 8px;
+}
+.news-letter #tw i{
+    color: #fff;
+}
+.news-letter #db{
+    background-color: #ea4c89;
+    padding: 8px;
+}
+.news-letter #db i{
+    color: #fff;
+}
+.news-letter #gp{
+    background-color: #f44336;
+    padding: 8px;
+}
+.news-letter #gp i{
+    color: #fff;
+}
+.news-letter .icon-box a{
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    nav > ul > li:hover > .sub-nav {
+        display: none;
+      }
+    nav > ul {
+        display: none;
+      }
+    
+      nav > label {
+        font-size: 20px;
+        display: block;
+        margin-top: 30%;
+      }
+    
+      nav label {
+        display: block;
+      }
+    
+      #header > nav {
+        margin-top: 25px;
+      }
+      
+      #heading{
+        width: 84%;
+      }
+      input:checked + ul.list {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        
+        z-index: 1;
+      }
+      nav .list li{
+        padding: 15px;
+        width: 88%;
+      }
+    
+      .drop-btn {
+        display: none;
+      }
+
+      #main-header h1{
+        font-size: 30px;
+        width: 230%;
+        margin-right:20%;
+      }
+
+      #main-header p{
+        width: 275%;
+        margin-right: 35%;
+      }
+
+      #main-header a{
+        margin-right: 40%;
+      }
+      #label-list i{
+        margin-right: 13%;
+      }
+      #greeting h2{
+        font-size: 40px;
+        margin-right: 10%;
+      }
+      #greeting p{
+        margin-right: 20%;
+      }
+      #greeting img{
+        width: 85%;
+        display: block;
+      }
+      .dogs-images .dog-info{
+        width: 100%;
+        margin-right: 10%;
+      }
+      #our-statistics-section ul{
+        flex-direction: column;
+        margin-right: 10%;
+      }
+      #What-we-do h2{
+        margin-right: 10%;
+      }
+      #pet-services{
+        flex-direction: column;
+        margin-left: 5%;
+      }
+      .pet-service-sub{
+        width: 100%;
+      }
+      .services-list .container{
+        width: 100%;
+        margin: 10% 0;
+        padding: 20px 0 0 0;
+        border: 1px solid rgb(235, 231, 231);
+        border-radius: 5px;
+      }
+      #Testimonials .container-box{
+        flex-direction: column;
+      }
+      .container .service-name{
+        margin: 2% 0;
+      }
+      .container-box .author{
+        margin-right: 10%;
+      }
+      .container-box .author .introduction{
+        margin-right: 10%;
+        font-size: 15px;
+        width: 175%;
+      }
+      #Testimonials h2{
+        margin: 0 10% 0 0
+      }
+      #Our-Blog .container2{
+        flex-direction: column;
+        margin-left: 5%;
+      }
+      .container2 .box{
+        width: 100%;
+        margin-bottom: 10%;
+      }
+      .container2 .box-2{
+        width: 100%;
+      }
+      #Contact-Us{
+        padding: 0;
+      }
+      #Contact-Us .container3 {
+        flex-direction: column;
+        margin: 0 20%;
+        margin-left: 10%;
+        
+      }
+      .container3 .contact-form{
+        width: 100%;
+      }
+      .container3 .contact-form .form-conatainer {
+        margin: 10% 0;
+      }
+      #Contact-Us h2{
+        margin-right: 10%;
+      }
+      footer .about-us-footer{
+        margin-left: 0;
+      }
+      footer{
+        grid-template-columns: 45% 45%;
+      }
+      footer .news-letter{
+        margin: 0;
+        width: 55vh;
+        position: unset;
+      }
+      footer .about-us-info-footer{
+        margin: 0;
+        
+      }
+      
+    }
